@@ -126,9 +126,9 @@ $dark-theme: mat.define-dark-theme((
 
 $heading-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $typography: mat.define-typography-config(
-    $headline-5: mat.define-typography-level(94px, $font-family: $heading-font-family),
+    $headline-5: mat.define-typography-level(86, $font-family: $heading-font-family),
     $subtitle-1: mat.define-typography-level(34px, $font-family: $heading-font-family),
-    $subtitle-2: mat.define-typography-level(46px, $font-family: $heading-font-family),
+    $subtitle-2: mat.define-typography-level(48px, $font-family: $heading-font-family),
     $body-2: mat.define-typography-level(24px, $font-family: $heading-font-family),
     $body-1: mat.define-typography-level(18px, $font-family: $heading-font-family),
     $button: mat.define-typography-level(14px, $font-family: $heading-font-family),
