@@ -1,17 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'sass:map';
+@use "@angular/material/theming";
+@use "@angular/material" as mat;
 
-$theme-colors: (
-  "primary":    #3b69a5ff,
-  "secondary":  #f2f2f2ff,
-  "success":    #50DCAAff,
-  "info":       #3B9EA5ff,
-  "warning":    #cc5959ff,
-  "danger":     #cc5959ff,
-  "light":      #f2f2f2ff,
-  "dark":       #3b69a5ff
-);
+@import "assets/generatetheme.scss";
 
-$font-size-base: 1rem;
-$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@include mat.core();
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+// import our custom theme
+@import "./theme.scss";
+
+// import custom component themes
+//@import "./custom-component-theme.scss";
+
+//.light-theme {
+@include mat.all-component-colors($light-theme);
+//@include custom-components-theme($light-theme);
+//  @include generate-theme-vars($light-theme);
+//}
+//color: mat.get-color-from-palette($plight-theme, 500);
+
+$primary: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "primary"));
+$primary-lighter: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "primary"), "lighter");
+$primary-darker: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "primary"), "darker");
+
+$accent: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "accent"));
+$accent-lighter: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "accent"), "lighter");
+$accent-darker: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "accent"), "darker");
+
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+}
+
+@include mat.all-component-typographies($typography);
+
+$color-config: mat.get-color-config($light-theme);
+
+//body { padding: 1rem; }
+
+.btn{
+  background-color: $accent;
+  color: $primary-darker;
+  font-weight: bold;
+}
+
+.hover-class:hover {
+  background-color: $accent-darker;
+  color: $primary;
+}
+
+.link{
+  color: $primary-lighter;
+  font-size: map-get($typography, "body2");
+}
+
+.background-bg{
+  background-color: $primary-lighter;
+  color: $primary-darker;
+}
+
+.footer-bg, .header-bg{
+  background-color: $primary;
+  color: $primary-lighter;
+}
+
+.footer-bg-darker, .header-bg-darker{
+  background-color: $primary-darker;
+  color: $primary-lighter;
+}
+
+
