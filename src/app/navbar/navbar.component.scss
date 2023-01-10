@@ -2,12 +2,12 @@
 
 .navbar-nav > li > .dropdown-menu{
     background-color: shift-color($primary, 20%);
-    color: shift-color($primary, -70%);
+    color: shift-color($primary, -90);
 }
 
 .footer-header-bg-darker, .navbar-toggler{
     background-color: shift-color($primary, 20%);
-    color: shift-color($primary, -70%);
+    color: shift-color($primary, -90%);
 }
 
 .btn{
@@ -17,15 +17,14 @@
 }
   
  .hover-class:hover {
-    background-color: shift-color($tertiary, 10%);
-    color: shift-color($tertiary, -70%);
+    background-color: shift-color($tertiary, 20%);
+    color: shift-color($tertiary, -90%);
 }
   
 .link{
-    color: shift-color($primary, -70%);
+    color: shift-color($primary, -90%);
 }
 
 .link:hover{
-    background-color: shift-color($primary, -70%);
-    color: shift-color($primary, 20%);
+    color: shift-color($primary, 40%);
 }

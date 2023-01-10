@@ -2,10 +2,13 @@
 
 .footer-header-bg{
     background-color: shift-color($primary, 10%);
-    color: shift-color($primary, -70%);
+    color: shift-color($primary, -90%);
 }
 
 .link{
-    color: shift-color($primary, -70%);
+    color: shift-color($primary, -90%);
 }
 
+.link:hover{
+    color: shift-color($primary, 30%);
+}

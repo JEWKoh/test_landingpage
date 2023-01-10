@@ -1,7 +1,7 @@
 @import "/src/styles.scss";
 
 .background-bg{
-    background-color: shift-color($primary, -70%);
+    background-color: shift-color($primary, -90%);
     color: shift-color($primary, 10%);
 }
 
@@ -12,10 +12,6 @@
 }
   
  .hover-class:hover {
-    background-color: shift-color($tertiary, 10%);
-    color: shift-color($tertiary, -70%);
-}
-  
-.link{
-    color: shift-color($primary, -70%);
+    background-color: shift-color($tertiary, 20%);
+    color: shift-color($tertiary, -90%);
 }
