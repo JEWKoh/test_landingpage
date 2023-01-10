@@ -1,5 +1,10 @@
 @import "/src/styles.scss";
 
+.container-fluid{
+    padding: 0% 17%
+  }
+  
+
 .navbar-nav > li > .dropdown-menu{
     background-color: shift-color($primary, 20%);
     color: shift-color($primary, -90);
@@ -21,10 +26,18 @@
     color: shift-color($tertiary, -90%);
 }
   
-.link{
+a{
     color: shift-color($primary, -90%);
 }
 
-.link:hover{
-    color: shift-color($primary, 40%);
+a:active{
+  color: shift-color($primary, 40%);
+}
+
+a:hover{
+  color: shift-color($primary, 40%);
+}
+
+a:disabled{
+  color: shift-color($primary, 20%);
 }
