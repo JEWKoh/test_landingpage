@@ -1,0 +1,21 @@
+@import "/src/styles.scss";
+
+.background-bg{
+    background-color: shift-color($primary, -70%);
+    color: shift-color($primary, 10%);
+}
+
+.btn{
+    background-color: shift-color($tertiary, 0%);
+    color: shift-color($tertiary, 50%);
+    font-weight: bold;
+}
+  
+ .hover-class:hover {
+    background-color: shift-color($tertiary, 10%);
+    color: shift-color($tertiary, -70%);
+}
+  
+.link{
+    color: shift-color($primary, -70%);
+}

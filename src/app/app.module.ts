@@ -12,7 +12,6 @@ import { TabsComponent } from './tabs/tabs.component';
 import { CallactionComponent } from './callaction/callaction.component';
 import { FeaturesComponent } from './features/features.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

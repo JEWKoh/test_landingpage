@@ -1,0 +1,6 @@
+@import "/src/styles.scss";
+
+.background-bg{
+    background-color: shift-color($primary, -70%);
+    color: shift-color($primary, 10%);
+}

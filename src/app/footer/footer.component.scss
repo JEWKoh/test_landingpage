@@ -1,4 +1,11 @@
+@import "/src/styles.scss";
 
+.footer-header-bg{
+    background-color: shift-color($primary, 10%);
+    color: shift-color($primary, -70%);
+}
 
-
+.link{
+    color: shift-color($primary, -70%);
+}
 

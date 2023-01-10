@@ -102,9 +102,9 @@ $my-redpalette: (
     ),
 );
 
-$my-primary: mat.define-palette($my-primarypalette, 500, 100, 700);
-$my-accent: mat.define-palette($my-accentpalette, 500, 100, 700);
-$my-warn: mat.define-palette($my-redpalette, 500, 100, 700);
+$my-primary: mat.define-palette($my-primarypalette, 500, 50, 700);
+$my-accent: mat.define-palette($my-accentpalette, 500, 50, 700);
+$my-warn: mat.define-palette($my-redpalette, 500, 50, 700);
 
 // The Light Side (default)
 $light-theme: mat.define-light-theme((
@@ -126,10 +126,10 @@ $dark-theme: mat.define-dark-theme((
 
 $heading-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $typography: mat.define-typography-config(
-    $headline-5: mat.define-typography-level(96px, $font-family: $heading-font-family),
-    $subtitle-1: mat.define-typography-level(34px, $font-family: $heading-font-family),
-    $subtitle-2: mat.define-typography-level(48px, $font-family: $heading-font-family),
-    $body-2: mat.define-typography-level(24px, $font-family: $heading-font-family),
-    $body-1: mat.define-typography-level(18px, $font-family: $heading-font-family),
-    $button: mat.define-typography-level(14px, $font-family: $heading-font-family),
+    $headline-5: mat.define-typography-level(4.5rem, $font-family: $heading-font-family),
+    $subtitle-1: mat.define-typography-level(2rem, $font-family: $heading-font-family),
+    $subtitle-2: mat.define-typography-level(2.5rem, $font-family: $heading-font-family),
+    $body-2: mat.define-typography-level(1.375rem, $font-family: $heading-font-family),
+    $body-1: mat.define-typography-level(1rem, $font-family: $heading-font-family),
+    $button: mat.define-typography-level(0.75rem, $font-family: $heading-font-family),
  );

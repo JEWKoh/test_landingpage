@@ -1,8 +1,16 @@
+@import "/src/styles.scss";
+
 @media only screen and (max-width: 600px) {
     .col {
       width: 100%;
     }
 }
+
+.background-bg{
+    background-color: shift-color($primary, -70%);
+    color: shift-color($primary, 10%);
+  }
+  
 
 body {
     background: #B1EA86;

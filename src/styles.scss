@@ -1,72 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'sass:map';
-@use "@angular/material/theming";
-@use "@angular/material" as mat;
+@import "../node_modules/bootstrap/scss/functions";
 
-@import "assets/generatetheme.scss";
+// 2. Include any default variable overrides here
+$body-bg: #fff;
+$body-color: #eee;
 
-@include mat.core();
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../node_modules/bootstrap/scss/variables";
+//@import "../node_modules/bootstrap/scss/variables-dark";
 
-// import our custom theme
-@import "./theme.scss";
+// 4. Include any default map overrides here
 
-// import custom component themes
-//@import "./custom-component-theme.scss";
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+//@import "../node_modules/bootstrap/scss/root";
 
-//.light-theme {
-@include mat.all-component-colors($light-theme);
-//@include custom-components-theme($light-theme);
-//  @include generate-theme-vars($light-theme);
-//}
-//color: mat.get-color-from-palette($plight-theme, 500);
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+//@import "../node_modules/bootstrap/scss/reboot";
+//@import "../node_modules/bootstrap/scss/type";
+//@import "../node_modules/bootstrap/scss/images";
+//@import "../node_modules/bootstrap/scss/containers";
+//@import "../node_modules/bootstrap/scss/grid";
+//@import "../node_modules/bootstrap/scss/helpers";
 
-$primary: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "primary"));
-$primary-lighter: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "primary"), "lighter");
-$primary-darker: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "primary"), "darker");
-
-$accent: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "accent"));
-$accent-lighter: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "accent"), "lighter");
-$accent-darker: mat.get-color-from-palette(map-get(mat.get-color-config($light-theme), "accent"), "darker");
-
-.dark-theme {
-  @include mat.all-component-colors($dark-theme);
-}
-
-@include mat.all-component-typographies($typography);
-
-$color-config: mat.get-color-config($light-theme);
-
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
 //body { padding: 1rem; }
 
-.btn{
-  background-color: $accent;
-  color: $primary-darker;
-  font-weight: bold;
+// Themes
+$primary: #5599d6;
+$tertiary: #ffd653;
+$danger: #cc0000;
+
+$theme-colors: (
+  "primary": $primary,
+  "tertiary": $tertiary,
+  "danger": $danger,
+);
+
+// Shade the color if the weight is positive, else tint it
+@function shift-color($color, $weight) {
+  @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
 }
 
-.hover-class:hover {
-  background-color: $accent-darker;
-  color: $primary;
+// Typography
+$font-family: -apple-system, BlinkMacSystemFont,
+  “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+  “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+  sans-serif;
+
+h1{
+  font-size: 4.5rem;
 }
 
-.link{
-  color: $primary-lighter;
-  font-size: map-get($typography, "body2");
+h2{
+  font-size: 2.5rem;
 }
 
-.background-bg{
-  background-color: $primary-lighter;
-  color: $primary-darker;
+h3{
+  font-size: 2rem;
 }
 
-.footer-bg, .header-bg{
-  background-color: $primary;
-  color: $primary-lighter;
+h4{
+  font-size: 2rem;
 }
 
-.footer-bg-darker, .header-bg-darker{
-  background-color: $primary-darker;
-  color: $primary-lighter;
+h5{
+  font-size: 1.375rem;
 }
 
-
+p, li{
+  font-size: 1rem;
+}
