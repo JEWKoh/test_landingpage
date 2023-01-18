@@ -209,9 +209,10 @@ $color-mode-type: data;
   }
 
   button.hover-class, .hover-class:hover {
-    color: $primary-text;
-    background-color: $secondary-bg-subtle;
+    color: $primary-bg-subtle;
+    background-color: $secondary-text;
     text-decoration: none;
+    font-weight: bold;
   }
 
   .dropdown-menu {
@@ -261,9 +262,10 @@ $color-mode-type: data;
   }
 
   button.hover-class, .hover-class:hover {
-    color: $primary-text;
-    background-color: $secondary-bg-subtle;
+    color: $primary-bg-subtle;
+    background-color: $secondary-text;
     text-decoration: none;
+    font-weight: bold;
   }
 
   .dropdown-menu {
@@ -313,9 +315,10 @@ $color-mode-type: data;
   }
 
   button.hover-class, .hover-class:hover {
-    color: $primary-text;
+    color: $primary-bg-subtle;
     background-color: $secondary-bg-subtle;
     text-decoration: none;
+    font-weight: bold;
   }
 
   .dropdown-menu {
