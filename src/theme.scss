@@ -1,164 +1,332 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+$blue: #3b69a5;
+$indigo: #171a38;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #cc5959;
+$orange: #fd7e14;
+$yellow: #ffd653;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+//$blue: #bfe3fd;
+//$indigo: #171a38;
+//$purple: #6f42c1;
+//$pink: #e83e8c;
+//$red: #cc5959;
+//$orange: #e97148;
+//$yellow: #bda45a;
+//$green: #6eb948;
+//$teal: #20c997;
+//$cyan: #17a2b8;
+//$white: #d0ddd9;
+//$gray-100: #f8f9fa;
+//$gray-200: #e9ecef;
+//$gray-300: #dee2e6;
+//$gray-400: #ced4da;
+//$gray-500: #adb5bd;
+//$gray-600: #868e96;
+//$gray-700: #495057;
+//$gray-800: #343a40;
+//$gray-900: #212529;
+//$black: #2d2a29;
+
+$color-contrast-dark: $black;
+$color-contrast-light: $white;
+
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
+
+$indigo-100: tint-color($indigo, 80%);
+$indigo-200: tint-color($indigo, 60%);
+$indigo-300: tint-color($indigo, 40%);
+$indigo-400: tint-color($indigo, 20%);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
+
+$purple-100: tint-color($purple, 80%);
+$purple-200: tint-color($purple, 60%);
+$purple-300: tint-color($purple, 40%);
+$purple-400: tint-color($purple, 20%);
+$purple-500: $purple;
+$purple-600: shade-color($purple, 20%);
+$purple-700: shade-color($purple, 40%);
+$purple-800: shade-color($purple, 60%);
+$purple-900: shade-color($purple, 80%);
+
+$pink-100: tint-color($pink, 80%);
+$pink-200: tint-color($pink, 60%);
+$pink-300: tint-color($pink, 40%);
+$pink-400: tint-color($pink, 20%);
+$pink-500: $pink;
+$pink-600: shade-color($pink, 20%);
+$pink-700: shade-color($pink, 40%);
+$pink-800: shade-color($pink, 60%);
+$pink-900: shade-color($pink, 80%);
+
+$red-100: tint-color($red, 80%);
+$red-200: tint-color($red, 60%);
+$red-300: tint-color($red, 40%);
+$red-400: tint-color($red, 20%);
+$red-500: $red;
+$red-600: shade-color($red, 20%);
+$red-700: shade-color($red, 40%);
+$red-800: shade-color($red, 60%);
+$red-900: shade-color($red, 80%);
+
+$orange-100: tint-color($orange, 80%);
+$orange-200: tint-color($orange, 60%);
+$orange-300: tint-color($orange, 40%);
+$orange-400: tint-color($orange, 20%);
+$orange-500: $orange;
+$orange-600: shade-color($orange, 20%);
+$orange-700: shade-color($orange, 40%);
+$orange-800: shade-color($orange, 60%);
+$orange-900: shade-color($orange, 80%);
+
+$yellow-100: tint-color($yellow, 80%);
+$yellow-200: tint-color($yellow, 60%);
+$yellow-300: tint-color($yellow, 40%);
+$yellow-400: tint-color($yellow, 20%);
+$yellow-500: $yellow;
+$yellow-600: shade-color($yellow, 20%);
+$yellow-700: shade-color($yellow, 40%);
+$yellow-800: shade-color($yellow, 60%);
+$yellow-900: shade-color($yellow, 80%);
+
+$green-100: tint-color($green, 80%);
+$green-200: tint-color($green, 60%);
+$green-300: tint-color($green, 40%);
+$green-400: tint-color($green, 20%);
+$green-500: $green;
+$green-600: shade-color($green, 20%);
+$green-700: shade-color($green, 40%);
+$green-800: shade-color($green, 60%);
+$green-900: shade-color($green, 80%);
+
+$teal-100: tint-color($teal, 80%);
+$teal-200: tint-color($teal, 60%);
+$teal-300: tint-color($teal, 40%);
+$teal-400: tint-color($teal, 20%);
+$teal-500: $teal;
+$teal-600: shade-color($teal, 20%);
+$teal-700: shade-color($teal, 40%);
+$teal-800: shade-color($teal, 60%);
+$teal-900: shade-color($teal, 80%);
+
+$cyan-100: tint-color($cyan, 80%);
+$cyan-200: tint-color($cyan, 60%);
+$cyan-300: tint-color($cyan, 40%);
+$cyan-400: tint-color($cyan, 20%);
+$cyan-500: $cyan;
+$cyan-600: shade-color($cyan, 20%);
+$cyan-700: shade-color($cyan, 40%);
+$cyan-800: shade-color($cyan, 60%);
+$cyan-900: shade-color($cyan, 80%);
+
+$blues: ("blue-100": $blue-100, "blue-200": $blue-200, "blue-300": $blue-300, "blue-400": $blue-400, "blue-500": $blue-500, "blue-600": $blue-600, "blue-700": $blue-700, "blue-800": $blue-800, "blue-900": $blue-900);
+$indigos: ("indigo-100": $indigo-100, "indigo-200": $indigo-200, "indigo-300": $indigo-300, "indigo-400": $indigo-400, "indigo-500": $indigo-500, "indigo-600": $indigo-600, "indigo-700": $indigo-700, "indigo-800": $indigo-800, "indigo-900": $indigo-900);
+$purples: ("purple-100": $purple-100, "purple-200": $purple-200, "purple-300": $purple-300, "purple-400": $purple-400, "purple-500": $purple-500, "purple-600": $purple-600, "purple-700": $purple-700, "purple-800": $purple-800, "purple-900": $purple-900);
+$pinks: ("pink-100": $pink-100, "pink-200": $pink-200, "pink-300": $pink-300, "pink-400": $pink-400, "pink-500": $pink-500, "pink-600": $pink-600, "pink-700": $pink-700, "pink-800": $pink-800, "pink-900": $pink-900);
+$reds: ("red-100": $red-100, "red-200": $red-200, "red-300": $red-300, "red-400": $red-400, "red-500": $red-500, "red-600": $red-600, "red-700": $red-700, "red-800": $red-800, "red-900": $red-900);
+$oranges: ("orange-100": $orange-100, "orange-200": $orange-200, "orange-300": $orange-300, "orange-400": $orange-400, "orange-500": $orange-500, "orange-600": $orange-600, "orange-700": $orange-700, "orange-800": $orange-800, "orange-900": $orange-900);
+$yellows: ("yellow-100": $yellow-100, "yellow-200": $yellow-200, "yellow-300": $yellow-300, "yellow-400": $yellow-400, "yellow-500": $yellow-500, "yellow-600": $yellow-600, "yellow-700": $yellow-700, "yellow-800": $yellow-800, "yellow-900": $yellow-900);
+$greens: ("green-100": $green-100, "green-200": $green-200, "green-300": $green-300, "green-400": $green-400, "green-500": $green-500, "green-600": $green-600, "green-700": $green-700, "green-800": $green-800, "green-900": $green-900);
+$teals: ("teal-100": $teal-100, "teal-200": $teal-200, "teal-300": $teal-300, "teal-400": $teal-400, "teal-500": $teal-500, "teal-600": $teal-600, "teal-700": $teal-700, "teal-800": $teal-800, "teal-900": $teal-900);
+$cyans: ("cyan-100": $cyan-100, "cyan-200": $cyan-200, "cyan-300": $cyan-300, "cyan-400": $cyan-400, "cyan-500": $cyan-500, "cyan-600": $cyan-600, "cyan-700": $cyan-700, "cyan-800": $cyan-800, "cyan-900": $cyan-900);
+$grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $gray-500, 600: $gray-600, 700: $gray-700, 800: $gray-800, 900: $gray-900);
+$theme-colors: (primary: $blue, secondary: $red, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800);
+$theme-color-interval: 8%;
 
 $color-mode-type: data;
 
 @include color-mode(light) {
-  $blue: #3b69a5;
-  $indigo: #171a38;
-  $purple: #6f42c1;
-  $pink: #e83e8c;
-  $red: #cc5959;
-  $orange: #fd7e14;
-  $yellow: #ffd653;
-  $green: #28a745;
-  $teal: #20c997;
-  $cyan: #17a2b8;
-  $white: #fff;
-  $gray-100: #f8f9fa;
-  $gray-200: #e9ecef;
-  $gray-300: #dee2e6;
-  $gray-400: #ced4da;
-  $gray-500: #adb5bd;
-  $gray-600: #868e96;
-  $gray-700: #495057;
-  $gray-800: #343a40;
-  $gray-900: #212529;
-  $black: #000;
-  $grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $gray-500, 600: $gray-600, 700: $gray-700, 800: $gray-800, 900: $gray-900);
-  $theme-colors: (primary: $blue, secondary: $red, success: $green, info: $cyan, warning: $yellow, danger: $pink, light: $gray-100, dark: $gray-800);
-  $colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800);
-  $theme-color-interval: 8%;
- 
+  $primary-text:            $blue-600; //
+  $secondary-text:          $red-500; //
+  $success-text:            $green-600; //
+  $warning-text:            $yellow-700; //
+  $light-text:              $gray-600;
+  $dark-text:               $gray-700;
+    
+  $primary-bg-subtle:       $blue-100; //
+  $secondary-bg-subtle:     $red-100; //
+  $success-bg-subtle:       $green-100; //
+  $warning-bg-subtle:       $yellow-100; //
+  $light-bg-subtle:         mix($gray-100, $white);
+  $dark-bg-subtle:          $gray-400;
+
   body {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, .card, .text-muted {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 
   .footer-header-bg-darker {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 
   .footer-header-bg {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 
   a:link, a:visited, a:hover, .nav-item.nav-link {
-    color: var(--bs-primary-text);
+    color: $secondary-text;
     text-decoration: none;
   }
 
   button.hover-class, .hover-class:hover {
-    color: var(--bs-primary-bg-subtle);
-    background-color: var(--bs-primary-text);
+    color: $primary-text;
+    background-color: $secondary-bg-subtle;
     text-decoration: none;
   }
 
   .dropdown-menu {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
-}
-
-
-
-@include color-mode(dark) {
-  $blue: #3b69a5;
-  $indigo: #171a38;
-  $purple: #6f42c1;
-  $pink: #e83e8c;
-  $red: #cc5959;
-  $orange: #fd7e14;
-  $yellow: #ffd653;
-  $green: #28a745;
-  $teal: #20c997;
-  $cyan: #17a2b8;
-  $white: #d0ddd9;
-  $gray-100: #f8f9fa;
-  $gray-200: #e9ecef;
-  $gray-300: #dee2e6;
-  $gray-400: #ced4da;
-  $gray-500: #adb5bd;
-  $gray-600: #868e96;
-  $gray-700: #495057;
-  $gray-800: #343a40;
-  $gray-900: #212529;
-  $black: #2d2a29;
-  $grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $gray-500, 600: $gray-600, 700: $gray-700, 800: $gray-800, 900: $gray-900);
-  $theme-colors: (primary: $black, secondary: $red, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
-  $colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800);
-  $theme-color-interval: 8%;
-
-  body {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
-  }
-
-  .footer-header-bg-darker {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
-  }
-
-  .footer-header-bg {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
-  }
-
-  a:link, a:visited, a:hover, .nav-item.nav-link {
-    color: var(--bs-primary-text);
-    text-decoration: none;
-  }
-
-  button.hover-class, .hover-class:hover {
-    color: var(--bs-primary-bg-subtle);
-    background-color: var(--bs-primary-text);
-    text-decoration: none;
-  }
-
-  .dropdown-menu {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
-  }
-
 }
 
 @media (prefers-color-scheme: light) {
-    body {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+  $primary-text:            $blue-600; //
+  $secondary-text:          $red-500; //
+  $success-text:            $green-600; //
+  $warning-text:            $yellow-700; //
+  $light-text:              $gray-600;
+  $dark-text:               $gray-700;
+    
+  $primary-bg-subtle:       $blue-100; //
+  $secondary-bg-subtle:     $red-100; //
+  $success-bg-subtle:       $green-100; //
+  $warning-bg-subtle:       $yellow-100; //
+  $light-bg-subtle:         mix($gray-100, $white);
+  $dark-bg-subtle:          $gray-400;
+
+  body {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, .card, .text-muted {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 
   .footer-header-bg-darker {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 
   .footer-header-bg {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 
   a:link, a:visited, a:hover, .nav-item.nav-link {
-    color: var(--bs-primary-text);
+    color: $secondary-text;
     text-decoration: none;
   }
 
   button.hover-class, .hover-class:hover {
-    color: var(--bs-primary-bg-subtle);
-    background-color: var(--bs-primary-text);
+    color: $primary-text;
+    background-color: $secondary-bg-subtle;
     text-decoration: none;
   }
 
   .dropdown-menu {
-    color: var(--bs-primary-text);
-    background-color: var(--bs-primary-bg-subtle);
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
   }
 }
+
+@include color-mode(dark) {
+  $primary-text:            $indigo-100; //
+  $secondary-text:          $red-500; //
+  $success-text:            $green-100; //
+  $warning-text:            $yellow-100; //
+  $light-text:              $gray-100;
+  $dark-text:               $gray-400;
+  
+  $primary-bg-subtle:       $indigo-600; //
+  $secondary-bg-subtle:     $red-500; //
+  $success-bg-subtle:       $green-600; //
+  $warning-bg-subtle:       $yellow-700; //
+  $light-bg-subtle:         mix($gray-600, $white);
+  $dark-bg-subtle:          $gray-700;
+
+  body {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, .card, .text-muted  {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+
+  .footer-header-bg-darker {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+
+  .footer-header-bg {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+
+  a:link, a:visited, a:hover, .nav-item.nav-link {
+    color: $secondary-text;
+    text-decoration: none;
+  }
+
+  button.hover-class, .hover-class:hover {
+    color: $primary-text;
+    background-color: $secondary-bg-subtle;
+    text-decoration: none;
+  }
+
+  .dropdown-menu {
+    color: $secondary-text;
+    background-color: $primary-bg-subtle;
+  }
+}
+
 // Blie- bg: 3b69a5
 // dark 15253a
 // lightf2f2f2
 // secondary cc5959
+
+//@import "bootstrap";
