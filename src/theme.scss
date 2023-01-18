@@ -274,14 +274,14 @@ $color-mode-type: data;
 
 @include color-mode(dark) {
   $primary-text:            $indigo-100; //
-  $secondary-text:          $red-500; //
+  $secondary-text:          $red-200; //
   $success-text:            $green-100; //
   $warning-text:            $yellow-100; //
   $light-text:              $gray-100;
   $dark-text:               $gray-400;
   
   $primary-bg-subtle:       $indigo-600; //
-  $secondary-bg-subtle:     $red-500; //
+  $secondary-bg-subtle:     $red-200; //
   $success-bg-subtle:       $green-600; //
   $warning-bg-subtle:       $yellow-700; //
   $light-bg-subtle:         mix($gray-600, $white);
