@@ -30,6 +30,10 @@
 //@import "../node_modules/bootstrap/scss/utilities/api";
 //body { padding: 1rem; }
 
+body {
+  overflow-x: hidden;
+}
+
 // Typography
 $font-family: -apple-system, BlinkMacSystemFont,
   “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
